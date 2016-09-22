@@ -6,6 +6,10 @@ public class Codeforces372_2B_Main {
 		Scanner in = new Scanner(System.in);
 		String s = in.nextLine();
 		in.close();
+		if (s.length() < 26) {
+			System.out.println(-1);
+			return;
+		}
 		// StringBuilder sb = new StringBuilder(s.substring(0, 26));
 		int[] map = new int[26];
 		for (int i = 0; i < 26; i++)
@@ -39,7 +43,7 @@ public class Codeforces372_2B_Main {
 				i++;
 			}
 		}
-		if (k+l != 26){
+		if (k + l != 26) {
 			System.out.println(-1);
 			return;
 		}
@@ -52,11 +56,11 @@ public class Codeforces372_2B_Main {
 				sb.setCharAt(j, (char) ('A' + ind));
 				ind++;
 			}
-		for (int i1 = 0; i1<sb.length(); i1++)
+		for (int i1 = 0; i1 < sb.length(); i1++)
 			if (sb.charAt(i1) == '?')
 				sb.setCharAt(i1, 'A');
 		System.out.println(sb);
-		
+
 	}
 
 }
